@@ -1,20 +1,23 @@
+// Programming with p5.js – Tutorial 2.2 The Coding Train
+
+  let circleX = 200;
+
 function setup() {
-  createCanvas(1080, 1080);
-  print("Hello");
-    background(0);
+  createCanvas(500, 500);
+  background(0);
+}
+  
+  function mousePressed () {
+  circleX = 0;   
 }
 
 function draw() {
 
   // Could add transparency through fill Alpha
-  fill(70,25,255);
+  fill(70,25,255, 10);
   stroke(200,200,200);
   strokeWeight(2);
-  circle(mouseX,mouseY, 100);
+  circle(250, 250, circleX);
   
-}
-
-function mousePressed() {
-  // Press mouse for background refresh
-  background (0);
+  circleX = circleX + 2;
 }
